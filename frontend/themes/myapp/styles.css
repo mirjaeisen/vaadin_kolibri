@@ -1,0 +1,6 @@
+@import url('./main-layout.css');
+
+.hydrated {
+    visibility: inherit;
+    display: block!important;
+}
