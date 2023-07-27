@@ -5,66 +5,71 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
+import java.util.Optional;
+
 /**
  * Die **Progress**-Komponente erzeugt einen Fortschrittsbalken, über den eine optische Rückmeldung gegeben werden kann.
  */
 
 @Tag("kol-progress")
-@NpmPackage(value = "@public-ui/components", version = "1.5.0")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
 @JsModule("@public-ui/components/dist/components/kol-progress")
 public class KolProgress extends Component {
 	/**
-	 * Setzt die Bezeichnung der Fortschrittsanzeige.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
 	 * @param value String
 	 */
 	public void setLabel(final String value) {
-		getElement().setProperty("_label", value);
+		getElement().setProperty("_label", value.toString());
 	}
 
 	/**
-	 * Setzt die Bezeichnung der Fortschrittsanzeige.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getLabel() {
-		return getElement().getProperty("_label", null);
+	public Optional<String> getLabel() {
+		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
 	 * Gibt an, bei welchem Wert die Fortschrittsanzeige abgeschlossen ist.
 	 *
-	 * @param value double
+	 * @param value String
 	 */
-	public void setMax(final double value) {
-		getElement().setProperty("_max", value);
+	public void setMax(final String value) {
+		getElement().setProperty("_max", value.toString());
 	}
 
 	/**
 	 * Gibt an, bei welchem Wert die Fortschrittsanzeige abgeschlossen ist.
 	 *
-	 * @return double
+	 * @return Optional<String>
 	 */
-	public String getMax() {
-		return getElement().getProperty("_max", null);
+	public Optional<String> getMax() {
+		var value = getElement().getProperty("_max", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
-	 * Gibt an, ob der Prozess als Balken oder Kreis dargestellt wird.
+	 * Deprecated: Gibt an, ob der Prozess als Balken oder Kreis dargestellt wird.
 	 *
 	 * @param value String
 	 */
 	public void setType(final String value) {
-		getElement().setProperty("_type", value);
+		getElement().setProperty("_type", value.toString());
 	}
 
 	/**
-	 * Gibt an, ob der Prozess als Balken oder Kreis dargestellt wird.
+	 * Deprecated: Gibt an, ob der Prozess als Balken oder Kreis dargestellt wird.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getType() {
-		return getElement().getProperty("_type", null);
+	public Optional<String> getType() {
+		var value = getElement().getProperty("_type", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -73,33 +78,54 @@ public class KolProgress extends Component {
 	 * @param value String
 	 */
 	public void setUnit(final String value) {
-		getElement().setProperty("_unit", value);
+		getElement().setProperty("_unit", value.toString());
 	}
 
 	/**
 	 * Setzt die Einheit der Fortschrittswerte. (wird nicht angezeigt)
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getUnit() {
-		return getElement().getProperty("_unit", null);
+	public Optional<String> getUnit() {
+		var value = getElement().getProperty("_unit", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
 	 * Gibt an, wie weit die Anzeige fortgeschritten ist.
 	 *
-	 * @param value double
+	 * @param value String
 	 */
-	public void setValue(final double value) {
-		getElement().setProperty("_value", value);
+	public void setValue(final String value) {
+		getElement().setProperty("_value", value.toString());
 	}
 
 	/**
 	 * Gibt an, wie weit die Anzeige fortgeschritten ist.
 	 *
-	 * @return double
+	 * @return Optional<String>
 	 */
-	public String getValue() {
-		return getElement().getProperty("_value", null);
+	public Optional<String> getValue() {
+		var value = getElement().getProperty("_value", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
+	 *
+	 * @param value String
+	 */
+	public void setVariant(final String value) {
+		getElement().setProperty("_variant", value.toString());
+	}
+
+	/**
+	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getVariant() {
+		var value = getElement().getProperty("_variant", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }

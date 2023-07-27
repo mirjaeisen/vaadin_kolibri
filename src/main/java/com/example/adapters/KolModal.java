@@ -5,31 +5,52 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
+import java.util.Optional;
+
 /**
- * Mit Hilfe der **Modal**-Komponente können zusätzliche Informationen oder auch Eingabeformulare in einem Dialogfenster angezeigt werden. Ein offenes **Modal** kann via **ESC** geschlossen werden.
-Die **Modal**-Komponente ist standardmäßig versteckt. Sie wird i.d.R. erst nach Klick auf einen Button oder sonstigem Trigger angezeigt. Dabei wird der Hintergrund des Fensters deaktiviert und allein der Inhalt des Modal-Fensters ist aktiv.
+ * Vielen Dank, dass Sie diese Komponente zur Umsetzung eines Modals verwenden wollen. Inzwischen ist das native `<dialog>` Element sehr gut unterstützt (<kol-link _href="https://caniuse.com/?search=dialog" _label="https://caniuse.com/?search=dialog" _target="_blank" _label="caniuse"></kol-link>), barrierefrei, einfach zu benutzen und performanter (da nativ), daher empfehlen wir dieses zu verwenden. Wenn Sie aufgrund von Abwärtskompatibilität, oder weil Sie die **Modal**-Komponente bereits eingebaut haben, die Dokumentation zu unserem KolModal suchen, finden Sie diese etwas weiter unten. Die **Modal**-Komponente wird in Version 2 noch zur Verfügung stehen.
  */
 
 @Tag("kol-modal")
-@NpmPackage(value = "@public-ui/components", version = "1.5.0")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
 @JsModule("@public-ui/components/dist/components/kol-modal")
 public class KolModal extends Component {
 	/**
-	 * Gibt den Text an, der die Navigation von anderen Navigationen differenziert.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
 	 * @param value String
 	 */
 	public void setAriaLabel(final String value) {
-		getElement().setProperty("_aria-label", value);
+		getElement().setProperty("_aria-label", value.toString());
 	}
 
 	/**
-	 * Gibt den Text an, der die Navigation von anderen Navigationen differenziert.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getAriaLabel() {
-		return getElement().getProperty("_aria-label", null);
+	public Optional<String> getAriaLabel() {
+		var value = getElement().getProperty("_aria-label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 *
+	 * @param value String
+	 */
+	public void setLabel(final String value) {
+		getElement().setProperty("_label", value.toString());
+	}
+
+	/**
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getLabel() {
+		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -38,15 +59,16 @@ public class KolModal extends Component {
 	 * @param value String
 	 */
 	public void setWidth(final String value) {
-		getElement().setProperty("_width", value);
+		getElement().setProperty("_width", value.toString());
 	}
 
 	/**
 	 * Setzt die Breite des Modals. (max-width: 100%).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getWidth() {
-		return getElement().getProperty("_width", null);
+	public Optional<String> getWidth() {
+		var value = getElement().getProperty("_width", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }
