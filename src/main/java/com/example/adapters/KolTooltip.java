@@ -18,7 +18,7 @@ Ein geöffneter Tooltip lässt sich mit der `Escape`-Taste schließen, um ggf. �
  */
 
 @Tag("kol-tooltip")
-@NpmPackage(value = "@public-ui/components", version = "1.5.0")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
 @JsModule("@public-ui/components/dist/components/kol-tooltip")
 public class KolTooltip extends Component {
 	/**
@@ -27,51 +27,54 @@ public class KolTooltip extends Component {
 	 * @param value String
 	 */
 	public void setAlign(final String value) {
-		getElement().setProperty("_align", value);
+		getElement().setProperty("_align", value.toString());
 	}
 
 	/**
 	 * Setzt die Ausrichtung des Tooltips in Relation zum Elternelement.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getAlign() {
-		return getElement().getProperty("_align", null);
+	public Optional<String> getAlign() {
+		var value = getElement().getProperty("_align", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
-	 * Gibt die ID an, wenn z.B. Aria-Labelledby (Link) verwendet wird.
+	 * Gibt die interne ID des primären Elements in der Komponente an.
 	 *
 	 * @param value String
 	 */
 	public void setId(final String value) {
-		getElement().setProperty("_id", value);
+		getElement().setProperty("_id", value.toString());
 	}
 
 	/**
-	 * Gibt die ID an, wenn z.B. Aria-Labelledby (Link) verwendet wird.
+	 * Gibt die interne ID des primären Elements in der Komponente an.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
 	public Optional<String> getId() {
-		return Optional.of(getElement().getProperty("_id", null));
+		var value = getElement().getProperty("_id", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
-	 * Setzt den Text in dem Tooltip beim Fokussieren oder Maus-drüberfahren angezeigt wird.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
 	 * @param value String
 	 */
 	public void setLabel(final String value) {
-		getElement().setProperty("_label", value);
+		getElement().setProperty("_label", value.toString());
 	}
 
 	/**
-	 * Setzt den Text in dem Tooltip beim Fokussieren oder Maus-drüberfahren angezeigt wird.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getLabel() {
-		return getElement().getProperty("_label", null);
+	public Optional<String> getLabel() {
+		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }

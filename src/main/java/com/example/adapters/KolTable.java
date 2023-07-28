@@ -5,10 +5,10 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
-/**
- * k# Table
+import java.util.Optional;
 
-Die **Table**-Komponente dient primär der übersichtlichen Darstellung von Datenmengen. Dabei ist sie so ausgelegt, dass sie alle von den Daten abhängige Werte automatisch ermittelt und die Tabelle entsprechend darstellt. Hierzu gehören beispielsweise die optionalen Funktionalitäten Spaltensortierung oder Pagination.
+/**
+ * Die **Table**-Komponente dient primär der übersichtlichen Darstellung von Datenmengen. Dabei ist sie so ausgelegt, dass sie alle von den Daten abhängige Werte automatisch ermittelt und die Tabelle entsprechend darstellt. Hierzu gehören beispielsweise die optionalen Funktionalitäten Spaltensortierung oder Pagination.
 
 <kol-indented-text _summary="Backend-seitige Pagination">
 	Bei sehr großen Datenmengen ist auch eine manuelle Nutzung der Table-Komponente möglich. Das bedeutet, dass die Tabelle seitenweise "manuell" befüllt wird. Hierzu kann einfach anstatt der Table-Pagination eine "eigene" Pagination unter der Tabelle mittels der Pagination-Komponente verwendet werden.
@@ -16,25 +16,26 @@ Die **Table**-Komponente dient primär der übersichtlichen Darstellung von Date
  */
 
 @Tag("kol-table")
-@NpmPackage(value = "@public-ui/components", version = "1.5.0")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
 @JsModule("@public-ui/components/dist/components/kol-table")
 public class KolTable extends Component {
 	/**
-	 * Gibt den  Titel oder eine Legende mit Erklärungen zur Tabelle an.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
 	 * @param value String
 	 */
 	public void setCaption(final String value) {
-		getElement().setProperty("_caption", value);
+		getElement().setProperty("_caption", value.toString());
 	}
 
 	/**
-	 * Gibt den  Titel oder eine Legende mit Erklärungen zur Tabelle an.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getCaption() {
-		return getElement().getProperty("_caption", null);
+	public Optional<String> getCaption() {
+		var value = getElement().getProperty("_caption", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -43,16 +44,36 @@ public class KolTable extends Component {
 	 * @param value String
 	 */
 	public void setData(final String value) {
-		getElement().setProperty("_data", value);
+		getElement().setProperty("_data", value.toString());
 	}
 
 	/**
 	 * Gibt die Daten an, die für die Erstellung der Tabelle verwendet werden.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getData() {
-		return getElement().getProperty("_data", null);
+	public Optional<String> getData() {
+		var value = getElement().getProperty("_data", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Hier können die Daten für die Fußzeile der Tabelle übergeben werden.
+	 *
+	 * @param value String
+	 */
+	public void setDataFoot(final String value) {
+		getElement().setProperty("_data-foot", value.toString());
+	}
+
+	/**
+	 * Hier können die Daten für die Fußzeile der Tabelle übergeben werden.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getDataFoot() {
+		var value = getElement().getProperty("_data-foot", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -61,16 +82,36 @@ public class KolTable extends Component {
 	 * @param value String
 	 */
 	public void setHeaders(final String value) {
-		getElement().setProperty("_headers", value);
+		getElement().setProperty("_headers", value.toString());
 	}
 
 	/**
 	 * Gibt die horizontalen und vertikalen Header für die Tabelle an.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getHeaders() {
-		return getElement().getProperty("_headers", null);
+	public Optional<String> getHeaders() {
+		var value = getElement().getProperty("_headers", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the table caption.
+	 *
+	 * @param value String
+	 */
+	public void setLabel(final String value) {
+		getElement().setProperty("_label", value.toString());
+	}
+
+	/**
+	 * Defines the table caption.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getLabel() {
+		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -79,16 +120,17 @@ public class KolTable extends Component {
 	 * @param value String
 	 */
 	public void setMinWidth(final String value) {
-		getElement().setProperty("_min-width", value);
+		getElement().setProperty("_min-width", value.toString());
 	}
 
 	/**
 	 * Gibt an, die minimale Breite der Tabelle an.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getMinWidth() {
-		return getElement().getProperty("_min-width", null);
+	public Optional<String> getMinWidth() {
+		var value = getElement().getProperty("_min-width", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -97,15 +139,16 @@ public class KolTable extends Component {
 	 * @param value String
 	 */
 	public void setPagination(final String value) {
-		getElement().setProperty("_pagination", value);
+		getElement().setProperty("_pagination", value.toString());
 	}
 
 	/**
 	 * Gibt an, ob die Daten geteilt in Seiten angezeigt wird.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getPagination() {
-		return getElement().getProperty("_pagination", null);
+	public Optional<String> getPagination() {
+		var value = getElement().getProperty("_pagination", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }

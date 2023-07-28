@@ -5,6 +5,8 @@ import com.vaadin.flow.component.Tag;
 import com.vaadin.flow.component.dependency.JsModule;
 import com.vaadin.flow.component.dependency.NpmPackage;
 
+import java.util.Optional;
+
 /**
  * > <kol-badge _label="untested"></kol-badge> Diese neue Komponente wird als ungetestet markiert, da der vollständige Barrierefreiheitstest noch aussteht. Der vollständige Test kann bei neuen Komponenten und Funktionalitäten auch erst nach einem abgeschlossenen Release erfolgen.
 
@@ -12,43 +14,64 @@ Die **Quote**-Komponente verfügt über zwei Varianten, eine kurze Fließtext-(`
  */
 
 @Tag("kol-quote")
-@NpmPackage(value = "@public-ui/components", version = "1.5.0")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
 @JsModule("@public-ui/components/dist/components/kol-quote")
 public class KolQuote extends Component {
 	/**
-	 * Setzt die Überschrift.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
 	 * @param value String
 	 */
 	public void setCaption(final String value) {
-		getElement().setProperty("_caption", value);
+		getElement().setProperty("_caption", value.toString());
 	}
 
 	/**
-	 * Setzt die Überschrift.
+	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getCaption() {
-		return getElement().getProperty("_caption", null);
+	public Optional<String> getCaption() {
+		var value = getElement().getProperty("_caption", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
-	 * Link auf die Quelle des Zitates.
+	 * Gibt den Link zur Quelle des Zitates an.
 	 *
 	 * @param value String
 	 */
 	public void setHref(final String value) {
-		getElement().setProperty("_href", value);
+		getElement().setProperty("_href", value.toString());
 	}
 
 	/**
-	 * Link auf die Quelle des Zitates.
+	 * Gibt den Link zur Quelle des Zitates an.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getHref() {
-		return getElement().getProperty("_href", null);
+	public Optional<String> getHref() {
+		var value = getElement().getProperty("_href", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the label of the citation link.
+	 *
+	 * @param value String
+	 */
+	public void setLabel(final String value) {
+		getElement().setProperty("_label", value.toString());
+	}
+
+	/**
+	 * Defines the label of the citation link.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getLabel() {
+		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
@@ -57,33 +80,35 @@ public class KolQuote extends Component {
 	 * @param value String
 	 */
 	public void setQuote(final String value) {
-		getElement().setProperty("_quote", value);
+		getElement().setProperty("_quote", value.toString());
 	}
 
 	/**
 	 * Setzt den Text, also das Zitat selbst.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getQuote() {
-		return getElement().getProperty("_quote", null);
+	public Optional<String> getQuote() {
+		var value = getElement().getProperty("_quote", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
 	/**
-	 * Setzt die Variante des Zitats.
+	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
 	 *
 	 * @param value String
 	 */
 	public void setVariant(final String value) {
-		getElement().setProperty("_variant", value);
+		getElement().setProperty("_variant", value.toString());
 	}
 
 	/**
-	 * Setzt die Variante des Zitats.
+	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
 	 *
-	 * @return String
+	 * @return Optional<String>
 	 */
-	public String getVariant() {
-		return getElement().getProperty("_variant", null);
+	public Optional<String> getVariant() {
+		var value = getElement().getProperty("_variant", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }

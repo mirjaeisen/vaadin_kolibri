@@ -1,3 +1,5 @@
+/frontend/assets/
+/src/main/dev-build/
 /target/
 .idea/
 .vscode/
@@ -13,6 +15,9 @@ node_modules/
 frontend/generated/
 pnpmfile.js
 vite.generated.ts
+tsconfig.json
+types.d.ts
+vite.config.ts
 
 # Browser drivers for local integration tests
 drivers/
