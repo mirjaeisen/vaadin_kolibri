@@ -5,13 +5,14 @@
     "postinstall:assets-components": "cpy \"node_modules/@public-ui/components/assets/**/*\" frontend/assets --dot",
     "postinstall:assets-themes": "cpy \"node_modules/@public-ui/themes/assets/**/*\" frontend/assets --dot",
     "postinstall:lib-public-ui": "cpy \"node_modules/@public-ui/**/*\" frontend/assets/@public-ui --dot",
-    "start": "npm run clean && mvn clean package -Pproduction && java -jar target/myapp-1.0-SNAPSHOT.jar",
+    "restart": "npm run clean && npm run start",
+    "start": "mvn clean package -Pproduction && java -jar target/myapp-1.0-SNAPSHOT.jar",
     "update": "ncu -t minor -u && ncu && npm i"
   },
   "dependencies": {
     "@polymer/polymer": "3.5.1",
-    "@public-ui/components": "1.6.0-rc.21",
-    "@public-ui/themes": "1.6.0-rc.21",
+    "@public-ui/components": "1.6.0-rc.23",
+    "@public-ui/themes": "1.6.0-rc.23",
     "@stencil/core": "4.0.2",
     "@vaadin/a11y-base": "24.1.4",
     "@vaadin/accordion": "24.1.0",
@@ -112,7 +113,7 @@
   "vaadin": {
     "dependencies": {
       "@polymer/polymer": "3.5.1",
-      "@public-ui/components": "1.6.0-rc.21",
+      "@public-ui/components": "1.6.0-rc.23",
       "@vaadin/a11y-base": "24.1.4",
       "@vaadin/accordion": "24.1.0",
       "@vaadin/app-layout": "24.1.0",
@@ -206,7 +207,7 @@
       "workbox-core": "7.0.0",
       "workbox-precaching": "7.0.0"
     },
-    "hash": "6171b75ecc60b69efe082de9b86b46592d2eb3b41899aa8bdd2d4abe1c5839e7"
+    "hash": "18d3390d3981568e66fdd94a14811a7403e2a0651f9ed97431bd479a8c0c032e"
   },
   "overrides": {
     "@vaadin/bundles": "$@vaadin/bundles",
