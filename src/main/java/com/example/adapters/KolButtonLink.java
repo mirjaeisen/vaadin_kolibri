@@ -20,7 +20,7 @@ Da der Link, nicht wie der Button, in mehrere Varianten (`primary` oder `seconda
  */
 
 @Tag("kol-button-link")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.20")
+@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
 @JsModule("@public-ui/components/dist/components/kol-button-link")
 public class KolButtonLink extends Component {
 	/**
@@ -252,6 +252,25 @@ public class KolButtonLink extends Component {
 	}
 
 	/**
+	 * Gibt den technischen Namen des Eingabefeldes an.
+	 *
+	 * @param value String
+	 */
+	public void setName(final String value) {
+		getElement().setProperty("_name", value.toString());
+	}
+
+	/**
+	 * Gibt den technischen Namen des Eingabefeldes an.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getName() {
+		var value = getElement().getProperty("_name", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
 	 * Gibt die Rolle des primären Elements in der Komponente an.
 	 *
 	 * @param value String
@@ -324,6 +343,25 @@ public class KolButtonLink extends Component {
 	 */
 	public Optional<String> getType() {
 		var value = getElement().getProperty("_type", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Gibt einen Wert an, den der Schalter bei einem Klick zurückgibt.
+	 *
+	 * @param value String
+	 */
+	public void setValue(final String value) {
+		getElement().setProperty("_value", value.toString());
+	}
+
+	/**
+	 * Gibt einen Wert an, den der Schalter bei einem Klick zurückgibt.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getValue() {
+		var value = getElement().getProperty("_value", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 }
