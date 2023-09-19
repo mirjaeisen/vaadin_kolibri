@@ -20,11 +20,11 @@ noch die Icons ausgegeben.
  */
 
 @Tag("kol-nav")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-nav")
 public class KolNav extends Component {
 	/**
-	 * Gibt den Wert von aria-current an, der bei dem aktuellen Kontext innerhalb der Navigation verwendet werden soll.
+	 * Defines the value of aria-current to be used with the current context within the navigation.
 	 *
 	 * @param value String
 	 */
@@ -33,7 +33,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt den Wert von aria-current an, der bei dem aktuellen Kontext innerhalb der Navigation verwendet werden soll.
+	 * Defines the value of aria-current to be used with the current context within the navigation.
 	 *
 	 * @return Optional<String>
 	 */
@@ -43,7 +43,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Deprecated: Setzt die semantische Beschriftung der Komponente.
 	 *
 	 * @param value String
 	 */
@@ -52,7 +52,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Deprecated: Setzt die semantische Beschriftung der Komponente.
 	 *
 	 * @return Optional<String>
 	 */
@@ -62,7 +62,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob Knoten in der Navigation zusammengeklappt werden können. Ist standardmäßig aktiv.
+	 * Defines if navigation nodes can be collapsed or not. Enabled by default.
 	 *
 	 * @param value String
 	 */
@@ -71,7 +71,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob Knoten in der Navigation zusammengeklappt werden können. Ist standardmäßig aktiv.
+	 * Defines if navigation nodes can be collapsed or not. Enabled by default.
 	 *
 	 * @return Optional<String>
 	 */
@@ -81,7 +81,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Navigation kompakt angezeigt wird.
+	 * Deprecated: Gibt an, ob die Navigation kompakt angezeigt wird.
 	 *
 	 * @param value String
 	 */
@@ -90,7 +90,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Navigation kompakt angezeigt wird.
+	 * Deprecated: Gibt an, ob die Navigation kompakt angezeigt wird.
 	 *
 	 * @return Optional<String>
 	 */
@@ -100,7 +100,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Navigation eine zusätzliche Schaltfläche zum Aus- und Einklappen der Navigation anzeigen soll.
+	 * Deprecated: Gibt an, ob die Navigation eine zusätzliche Schaltfläche zum Aus- und Einklappen der Navigation anzeigen soll.
 	 *
 	 * @param value String
 	 */
@@ -109,7 +109,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Navigation eine zusätzliche Schaltfläche zum Aus- und Einklappen der Navigation anzeigen soll.
+	 * Deprecated: Gibt an, ob die Navigation eine zusätzliche Schaltfläche zum Aus- und Einklappen der Navigation anzeigen soll.
 	 *
 	 * @return Optional<String>
 	 */
@@ -119,7 +119,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Defines if navigation labels should be hidden
+	 * Hides the label.
 	 *
 	 * @param value String
 	 */
@@ -128,7 +128,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Defines if navigation labels should be hidden
+	 * Hides the label.
 	 *
 	 * @return Optional<String>
 	 */
@@ -138,7 +138,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @param value String
 	 */
@@ -147,7 +147,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @return Optional<String>
 	 */
@@ -157,7 +157,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt die Liste der darzustellenden Button, Links oder Texte an.
+	 * Defines the list of links, buttons or texts to render.
 	 *
 	 * @param value String
 	 */
@@ -166,7 +166,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt die Liste der darzustellenden Button, Links oder Texte an.
+	 * Defines the list of links, buttons or texts to render.
 	 *
 	 * @return Optional<String>
 	 */
@@ -176,7 +176,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt die horizontale oder vertikale Ausrichtung der Komponente an.
+	 * Defines whether the orientation of the component is horizontal or vertical.
 	 *
 	 * @param value String
 	 */
@@ -185,7 +185,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt die horizontale oder vertikale Ausrichtung der Komponente an.
+	 * Defines whether the orientation of the component is horizontal or vertical.
 	 *
 	 * @return Optional<String>
 	 */
@@ -195,7 +195,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
+	 * Deprecated: Defines which variant should be used for presentation.
 	 *
 	 * @param value String
 	 */
@@ -204,7 +204,7 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Gibt an, welche Variante der Darstellung genutzt werden soll.
+	 * Deprecated: Defines which variant should be used for presentation.
 	 *
 	 * @return Optional<String>
 	 */

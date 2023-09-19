@@ -18,11 +18,11 @@ Analog lässt sich die Komponente auch wieder schließen und der Inhalt damit ve
  */
 
 @Tag("kol-details")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-details")
 public class KolDetails extends Component {
 	/**
-	 * Defines the summary label.
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @param value String
 	 */
@@ -31,7 +31,7 @@ public class KolDetails extends Component {
 	}
 
 	/**
-	 * Defines the summary label.
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @return Optional<String>
 	 */
@@ -41,7 +41,7 @@ public class KolDetails extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Komponente entweder geöffnet oder geschlossen ist.
+	 * If set (to true) opens/expands the element, closes if not set (or set to false).
 	 *
 	 * @param value String
 	 */
@@ -50,7 +50,7 @@ public class KolDetails extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Komponente entweder geöffnet oder geschlossen ist.
+	 * If set (to true) opens/expands the element, closes if not set (or set to false).
 	 *
 	 * @return Optional<String>
 	 */
@@ -60,7 +60,7 @@ public class KolDetails extends Component {
 	}
 
 	/**
-	 * Gibt die Zusammenfassung der Detailbeschreibung an.
+	 * Deprecated: Gibt die Zusammenfassung der Detailbeschreibung an.
 	 *
 	 * @param value String
 	 */
@@ -69,7 +69,7 @@ public class KolDetails extends Component {
 	}
 
 	/**
-	 * Gibt die Zusammenfassung der Detailbeschreibung an.
+	 * Deprecated: Gibt die Zusammenfassung der Detailbeschreibung an.
 	 *
 	 * @return Optional<String>
 	 */

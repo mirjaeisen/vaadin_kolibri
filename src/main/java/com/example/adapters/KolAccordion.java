@@ -14,11 +14,11 @@ Accordions kommen immer dann zum Einsatz, wenn einem thematischen Oberbegriff zu
  */
 
 @Tag("kol-accordion")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-accordion")
 public class KolAccordion extends Component {
 	/**
-	 * Gibt die Beschriftung der Komponente an.
+	 * Deprecated: Gibt die Beschriftung der Komponente an.
 	 *
 	 * @param value String
 	 */
@@ -27,7 +27,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Gibt die Beschriftung der Komponente an.
+	 * Deprecated: Gibt die Beschriftung der Komponente an.
 	 *
 	 * @return Optional<String>
 	 */
@@ -37,7 +37,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Defines the button label
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @param value String
 	 */
@@ -46,7 +46,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Defines the button label
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @return Optional<String>
 	 */
@@ -56,7 +56,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Gibt an, welchen H-Level von 1 bis 6 die Überschrift hat. Oder bei 0, ob es keine Überschrift ist und als fett gedruckter Text angezeigt werden soll.
+	 * Defines which H-level from 1-6 the heading has. 0 specifies no heading and is shown as bold text.
 	 *
 	 * @param value String
 	 */
@@ -65,7 +65,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Gibt an, welchen H-Level von 1 bis 6 die Überschrift hat. Oder bei 0, ob es keine Überschrift ist und als fett gedruckter Text angezeigt werden soll.
+	 * Defines which H-level from 1-6 the heading has. 0 specifies no heading and is shown as bold text.
 	 *
 	 * @return Optional<String>
 	 */
@@ -75,7 +75,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Komponente entweder geöffnet oder geschlossen ist.
+	 * If set (to true) opens/expands the element, closes if not set (or set to false).
 	 *
 	 * @param value String
 	 */
@@ -84,7 +84,7 @@ public class KolAccordion extends Component {
 	}
 
 	/**
-	 * Gibt an, ob die Komponente entweder geöffnet oder geschlossen ist.
+	 * If set (to true) opens/expands the element, closes if not set (or set to false).
 	 *
 	 * @return Optional<String>
 	 */

@@ -14,7 +14,7 @@ Die **Image**-Komponente dient dazu, Bilder darzustellen.
  */
 
 @Tag("kol-image")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-image")
 public class KolImage extends Component {
 	/**
@@ -37,7 +37,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt den Lademodus.
+	 * Defines the loading mode for the image.
 	 *
 	 * @param value String
 	 */
@@ -46,7 +46,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt den Lademodus.
+	 * Defines the loading mode for the image.
 	 *
 	 * @return Optional<String>
 	 */
@@ -56,7 +56,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt Größen für unterschiedliche Auflösungen, unterstützend für _srcset.
+	 * Defines the image sizes for different screen resolutions, supporting _srcset.
 	 *
 	 * @param value String
 	 */
@@ -65,7 +65,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt Größen für unterschiedliche Auflösungen, unterstützend für _srcset.
+	 * Defines the image sizes for different screen resolutions, supporting _srcset.
 	 *
 	 * @return Optional<String>
 	 */
@@ -75,7 +75,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt die Quell-URL des Bildes.
+	 * Sets the image `src` attribute to the given string.
 	 *
 	 * @param value String
 	 */
@@ -84,7 +84,7 @@ public class KolImage extends Component {
 	}
 
 	/**
-	 * Setzt die Quell-URL des Bildes.
+	 * Sets the image `src` attribute to the given string.
 	 *
 	 * @return Optional<String>
 	 */

@@ -13,11 +13,11 @@ Der Tooltip für die Beschreibung wird bei Focus oder Hover der **Abbr**-Kompone
  */
 
 @Tag("kol-abbr")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-abbr")
 public class KolAbbr extends Component {
 	/**
-	 * Defines the abbreviation title and tooltip content
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @param value String
 	 */
@@ -26,7 +26,7 @@ public class KolAbbr extends Component {
 	}
 
 	/**
-	 * Defines the abbreviation title and tooltip content
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @return Optional<String>
 	 */
@@ -36,7 +36,7 @@ public class KolAbbr extends Component {
 	}
 
 	/**
-	 * Dieses Property gibt die Beschreibung oder Erläuterung der Abkürzung an.
+	 * Deprecated: Dieses Property gibt die Beschreibung oder Erläuterung der Abkürzung an.
 	 *
 	 * @param value String
 	 */
@@ -45,7 +45,7 @@ public class KolAbbr extends Component {
 	}
 
 	/**
-	 * Dieses Property gibt die Beschreibung oder Erläuterung der Abkürzung an.
+	 * Deprecated: Dieses Property gibt die Beschreibung oder Erläuterung der Abkürzung an.
 	 *
 	 * @return Optional<String>
 	 */
@@ -55,7 +55,7 @@ public class KolAbbr extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Tooltip bevorzugt entweder oben, rechts, unten oder links angezeigt werden soll.
+	 * Defines where to show the Tooltip preferably: top, right, bottom or left.
 	 *
 	 * @param value String
 	 */
@@ -64,7 +64,7 @@ public class KolAbbr extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Tooltip bevorzugt entweder oben, rechts, unten oder links angezeigt werden soll.
+	 * Defines where to show the Tooltip preferably: top, right, bottom or left.
 	 *
 	 * @return Optional<String>
 	 */

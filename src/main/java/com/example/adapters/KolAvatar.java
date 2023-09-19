@@ -12,11 +12,11 @@ import java.util.Optional;
  */
 
 @Tag("kol-avatar")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-avatar")
 public class KolAvatar extends Component {
 	/**
-	 * Defines the label, usually the name of the person, to render as alt text and to compute initials from
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @param value String
 	 */
@@ -25,7 +25,7 @@ public class KolAvatar extends Component {
 	}
 
 	/**
-	 * Defines the label, usually the name of the person, to render as alt text and to compute initials from
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.).
 	 *
 	 * @return Optional<String>
 	 */
@@ -35,7 +35,7 @@ public class KolAvatar extends Component {
 	}
 
 	/**
-	 * Defines the image source to render
+	 * Sets the image `src` attribute to the given string.
 	 *
 	 * @param value String
 	 */
@@ -44,7 +44,7 @@ public class KolAvatar extends Component {
 	}
 
 	/**
-	 * Defines the image source to render
+	 * Sets the image `src` attribute to the given string.
 	 *
 	 * @return Optional<String>
 	 */

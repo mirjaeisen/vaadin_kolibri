@@ -12,11 +12,11 @@ import java.util.Optional;
  */
 
 @Tag("kol-input-date")
-@NpmPackage(value = "@public-ui/components", version = "1.6.0-rc.23")
+@NpmPackage(value = "@public-ui/components", version = "1.6.2")
 @JsModule("@public-ui/components/dist/components/kol-input-date")
 public class KolInputDate extends Component {
 	/**
-	 * Gibt an, mit welcher Tastenkombination man das interaktive Element der Komponente auslösen oder fokussieren kann.
+	 * Defines which key combination can be used to trigger or focus the interactive element of the component.
 	 *
 	 * @param value String
 	 */
@@ -25,7 +25,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, mit welcher Tastenkombination man das interaktive Element der Komponente auslösen oder fokussieren kann.
+	 * Defines which key combination can be used to trigger or focus the interactive element of the component.
 	 *
 	 * @return Optional<String>
 	 */
@@ -35,7 +35,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Screenreader die Meldung aktiv vorlesen soll.
+	 * Defines whether the screen-readers should read out the notification.
 	 *
 	 * @param value String
 	 */
@@ -44,7 +44,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Screenreader die Meldung aktiv vorlesen soll.
+	 * Defines whether the screen-readers should read out the notification.
 	 *
 	 * @return Optional<String>
 	 */
@@ -54,7 +54,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob das Eingabefeld autovervollständigt werden kann.
+	 * Defines whether the input can be auto-completed.
 	 *
 	 * @param value String
 	 */
@@ -63,7 +63,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob das Eingabefeld autovervollständigt werden kann.
+	 * Defines whether the input can be auto-completed.
 	 *
 	 * @return Optional<String>
 	 */
@@ -73,7 +73,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Deaktiviert das interaktive Element in der Komponente und erlaubt keine Interaktion mehr damit.
+	 * Makes the element not focusable and ignore all events.
 	 *
 	 * @param value String
 	 */
@@ -82,7 +82,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Deaktiviert das interaktive Element in der Komponente und erlaubt keine Interaktion mehr damit.
+	 * Makes the element not focusable and ignore all events.
 	 *
 	 * @return Optional<String>
 	 */
@@ -92,7 +92,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Text für eine Fehlermeldung an.
+	 * Defines the error message text.
 	 *
 	 * @param value String
 	 */
@@ -101,7 +101,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Text für eine Fehlermeldung an.
+	 * Defines the error message text.
 	 *
 	 * @return Optional<String>
 	 */
@@ -111,7 +111,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Blendet die Beschriftung (Label) aus und zeigt sie stattdessen mittels eines Tooltips an.
+	 * Hides the label.
 	 *
 	 * @param value String
 	 */
@@ -120,7 +120,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Blendet die Beschriftung (Label) aus und zeigt sie stattdessen mittels eines Tooltips an.
+	 * Hides the label.
 	 *
 	 * @return Optional<String>
 	 */
@@ -130,7 +130,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Hinweistext an.
+	 * Defines the hint text.
 	 *
 	 * @param value String
 	 */
@@ -139,7 +139,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Hinweistext an.
+	 * Defines the hint text.
 	 *
 	 * @return Optional<String>
 	 */
@@ -149,7 +149,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt die Iconklasse (z.B.: `_icon="codicon codicon-home`).
+	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
 	 *
 	 * @param value String
 	 */
@@ -158,7 +158,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt die Iconklasse (z.B.: `_icon="codicon codicon-home`).
+	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
 	 *
 	 * @return Optional<String>
 	 */
@@ -168,7 +168,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die interne ID des primären Elements in der Komponente an.
+	 * Defines the internal ID of the primary component element.
 	 *
 	 * @param value String
 	 */
@@ -177,7 +177,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die interne ID des primären Elements in der Komponente an.
+	 * Defines the internal ID of the primary component element.
 	 *
 	 * @return Optional<String>
 	 */
@@ -187,7 +187,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.). Set to `false` to enable the expert slot.
 	 *
 	 * @param value String
 	 */
@@ -196,7 +196,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt die sichtbare oder semantische Beschriftung der Komponente (z.B. Aria-Label, Label, Headline, Caption, Summary usw.).
+	 * Defines the visible or semantic label of the component (e.g. aria-label, label, headline, caption, summary, etc.). Set to `false` to enable the expert slot.
 	 *
 	 * @return Optional<String>
 	 */
@@ -206,7 +206,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die Liste der Vorschlagszahlen an.
+	 * Deprecated: Gibt die Liste der Vorschlagszahlen an.
 	 *
 	 * @param value String
 	 */
@@ -215,7 +215,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die Liste der Vorschlagszahlen an.
+	 * Deprecated: Gibt die Liste der Vorschlagszahlen an.
 	 *
 	 * @return Optional<String>
 	 */
@@ -225,7 +225,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den größtmöglichen Eingabewert an.
+	 * Defines the largest possible input value.
 	 *
 	 * @param value String
 	 */
@@ -234,7 +234,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den größtmöglichen Eingabewert an.
+	 * Defines the largest possible input value.
 	 *
 	 * @return Optional<String>
 	 */
@@ -244,7 +244,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den kleinstmöglichen Eingabewert an.
+	 * Defines the smallest possible input value.
 	 *
 	 * @param value String
 	 */
@@ -253,7 +253,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den kleinstmöglichen Eingabewert an.
+	 * Defines the smallest possible input value.
 	 *
 	 * @return Optional<String>
 	 */
@@ -263,7 +263,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den technischen Namen des Eingabefeldes an.
+	 * Defines the technical name of an input field.
 	 *
 	 * @param value String
 	 */
@@ -272,7 +272,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den technischen Namen des Eingabefeldes an.
+	 * Defines the technical name of an input field.
 	 *
 	 * @return Optional<String>
 	 */
@@ -282,7 +282,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt das Eingabefeld in den schreibgeschützten Modus.
+	 * Makes the input element read only.
 	 *
 	 * @param value String
 	 */
@@ -291,7 +291,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt das Eingabefeld in den schreibgeschützten Modus.
+	 * Makes the input element read only.
 	 *
 	 * @return Optional<String>
 	 */
@@ -301,7 +301,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Macht das Eingabeelement zu einem Pflichtfeld.
+	 * Makes the input element required.
 	 *
 	 * @param value String
 	 */
@@ -310,7 +310,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Macht das Eingabeelement zu einem Pflichtfeld.
+	 * Makes the input element required.
 	 *
 	 * @return Optional<String>
 	 */
@@ -320,7 +320,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Ermöglicht eine Schaltfläche ins das Eingabefeld mit einer beliebigen Aktion zu einzufügen (ohne label).
+	 * Allows to add a button with an arbitrary action within the element (_hide-label only).
 	 *
 	 * @param value String
 	 */
@@ -329,7 +329,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Ermöglicht eine Schaltfläche ins das Eingabefeld mit einer beliebigen Aktion zu einzufügen (ohne label).
+	 * Allows to add a button with an arbitrary action within the element (_hide-label only).
 	 *
 	 * @return Optional<String>
 	 */
@@ -339,7 +339,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die Schrittweite der Wertveränderung an.
+	 * Defines the step size for value changes.
 	 *
 	 * @param value String
 	 */
@@ -348,7 +348,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt die Schrittweite der Wertveränderung an.
+	 * Defines the step size for value changes.
 	 *
 	 * @return Optional<String>
 	 */
@@ -377,7 +377,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, welchen Tab-Index das primäre Element in der Komponente hat. (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
+	 * Defines which tab-index the primary element of the component has. (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
 	 *
 	 * @param value String
 	 */
@@ -386,7 +386,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, welchen Tab-Index das primäre Element in der Komponente hat. (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
+	 * Defines which tab-index the primary element of the component has. (https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex)
 	 *
 	 * @return Optional<String>
 	 */
@@ -396,7 +396,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Tooltip bevorzugt entweder oben, rechts, unten oder links angezeigt werden soll.
+	 * Defines where to show the Tooltip preferably: top, right, bottom or left.
 	 *
 	 * @param value String
 	 */
@@ -405,7 +405,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob der Tooltip bevorzugt entweder oben, rechts, unten oder links angezeigt werden soll.
+	 * Defines where to show the Tooltip preferably: top, right, bottom or left.
 	 *
 	 * @return Optional<String>
 	 */
@@ -415,7 +415,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob dieses Eingabefeld von Nutzer:innen einmal besucht/berührt wurde.
+	 * Shows if the input was touched by a user.
 	 *
 	 * @param value String
 	 */
@@ -424,7 +424,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt an, ob dieses Eingabefeld von Nutzer:innen einmal besucht/berührt wurde.
+	 * Shows if the input was touched by a user.
 	 *
 	 * @return Optional<String>
 	 */
@@ -434,7 +434,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt den Typ der Komponente oder des interaktiven Elements in der Komponente an.
+	 * Defines either the type of the component or of the components interactive element.
 	 *
 	 * @param value String
 	 */
@@ -443,7 +443,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Setzt den Typ der Komponente oder des interaktiven Elements in der Komponente an.
+	 * Defines either the type of the component or of the components interactive element.
 	 *
 	 * @return Optional<String>
 	 */
@@ -453,7 +453,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Wert des Eingabefeldes an.
+	 * Defines the value of the input.
 	 *
 	 * @param value String
 	 */
@@ -462,7 +462,7 @@ public class KolInputDate extends Component {
 	}
 
 	/**
-	 * Gibt den Wert des Eingabefeldes an.
+	 * Defines the value of the input.
 	 *
 	 * @return Optional<String>
 	 */
