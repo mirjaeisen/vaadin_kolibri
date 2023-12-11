@@ -20,7 +20,7 @@ noch die Icons ausgegeben.
  */
 
 @Tag("kol-nav")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-nav")
 public class KolNav extends Component {
 	/**
@@ -119,7 +119,8 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Hides the label.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @param value String
 	 */
@@ -128,7 +129,8 @@ public class KolNav extends Component {
 	}
 
 	/**
-	 * Hides the label.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @return Optional<String>
 	 */

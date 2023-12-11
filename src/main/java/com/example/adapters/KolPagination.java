@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 
 @Tag("kol-pagination")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-pagination")
 public class KolPagination extends Component {
 	/**
@@ -35,7 +35,7 @@ public class KolPagination extends Component {
 	}
 
 	/**
-	 * Defines the custom class attribute for the buttons.
+	 * Defines the custom class attribute if _variant="custom" is set.
 	 *
 	 * @param value String
 	 */
@@ -44,7 +44,7 @@ public class KolPagination extends Component {
 	}
 
 	/**
-	 * Defines the custom class attribute for the buttons.
+	 * Defines the custom class attribute if _variant="custom" is set.
 	 *
 	 * @return Optional<String>
 	 */
@@ -88,6 +88,25 @@ public class KolPagination extends Component {
 	 */
 	public Optional<String> getLabel() {
 		var value = getElement().getProperty("_label", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the maximum number of pages.
+	 *
+	 * @param value String
+	 */
+	public void setMax(final String value) {
+		getElement().setProperty("_max", value.toString());
+	}
+
+	/**
+	 * Defines the maximum number of pages.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getMax() {
+		var value = getElement().getProperty("_max", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 

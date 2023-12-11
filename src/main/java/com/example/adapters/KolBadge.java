@@ -13,7 +13,7 @@ KoliBri bietet neben der Angabe der Hintergrundfarbe und automatischer Berechnun
  */
 
 @Tag("kol-badge")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-badge")
 public class KolBadge extends Component {
 	/**
@@ -61,7 +61,7 @@ public class KolBadge extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @param value String
 	 */
@@ -70,7 +70,7 @@ public class KolBadge extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @return Optional<String>
 	 */
@@ -95,6 +95,25 @@ public class KolBadge extends Component {
 	 */
 	public Optional<String> getIconOnly() {
 		var value = getElement().getProperty("_icon-only", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @param value String
+	 */
+	public void setIcons(final String value) {
+		getElement().setProperty("_icons", value.toString());
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getIcons() {
+		var value = getElement().getProperty("_icons", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 

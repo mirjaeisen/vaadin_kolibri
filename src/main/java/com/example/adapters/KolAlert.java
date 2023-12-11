@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 
 @Tag("kol-alert")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-alert")
 public class KolAlert extends Component {
 	/**
@@ -35,7 +35,7 @@ public class KolAlert extends Component {
 	}
 
 	/**
-	 * Defines whether the card has a close button.
+	 * Defines whether the element can be closed.
 	 *
 	 * @param value String
 	 */
@@ -44,7 +44,7 @@ public class KolAlert extends Component {
 	}
 
 	/**
-	 * Defines whether the card has a close button.
+	 * Defines whether the element can be closed.
 	 *
 	 * @return Optional<String>
 	 */

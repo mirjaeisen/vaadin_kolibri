@@ -14,7 +14,7 @@ Die **Quote**-Komponente verfügt über zwei Varianten, eine kurze Fließtext-(`
  */
 
 @Tag("kol-quote")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-quote")
 public class KolQuote extends Component {
 	/**
@@ -37,7 +37,7 @@ public class KolQuote extends Component {
 	}
 
 	/**
-	 * Defines the link to the source of the quote.
+	 * Sets the target URI of the link or citation source.
 	 *
 	 * @param value String
 	 */
@@ -46,7 +46,7 @@ public class KolQuote extends Component {
 	}
 
 	/**
-	 * Defines the link to the source of the quote.
+	 * Sets the target URI of the link or citation source.
 	 *
 	 * @return Optional<String>
 	 */

@@ -18,11 +18,11 @@ Ein geöffneter Tooltip lässt sich mit der `Escape`-Taste schließen, um ggf. �
  */
 
 @Tag("kol-tooltip-wc")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-tooltip-wc")
 public class KolTooltipWc extends Component {
 	/**
-	 * Defines the alignment of the tooltip in relation to the parent element.
+	 * Defines the alignment of the tooltip, popover or tabs in relation to the element.
 	 *
 	 * @param value String
 	 */
@@ -31,7 +31,7 @@ public class KolTooltipWc extends Component {
 	}
 
 	/**
-	 * Defines the alignment of the tooltip in relation to the parent element.
+	 * Defines the alignment of the tooltip, popover or tabs in relation to the element.
 	 *
 	 * @return Optional<String>
 	 */

@@ -14,12 +14,12 @@ Die **Popover**-Komponente stellt eine Möglichkeit dar zusätzliche Inhalte in 
 Das Triggerelement ist immer das im HTML vorangehende Element (previousSibling).
  */
 
-@Tag("kol-popover")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
-@JsModule("@public-ui/components/dist/components/kol-popover")
-public class KolPopover extends Component {
+@Tag("kol-popover-wc")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
+@JsModule("@public-ui/components/dist/components/kol-popover-wc")
+public class KolPopoverWc extends Component {
 	/**
-	 * Defines where to show the Tooltip preferably: top, right, bottom or left. In relation to trigger element.
+	 * Defines the alignment of the tooltip, popover or tabs in relation to the element.
 	 *
 	 * @param value String
 	 */
@@ -28,7 +28,7 @@ public class KolPopover extends Component {
 	}
 
 	/**
-	 * Defines where to show the Tooltip preferably: top, right, bottom or left. In relation to trigger element.
+	 * Defines the alignment of the tooltip, popover or tabs in relation to the element.
 	 *
 	 * @return Optional<String>
 	 */

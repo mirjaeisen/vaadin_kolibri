@@ -12,7 +12,7 @@ import java.util.Optional;
  */
 
 @Tag("kol-input-color")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-input-color")
 public class KolInputColor extends Component {
 	/**
@@ -111,7 +111,27 @@ public class KolInputColor extends Component {
 	}
 
 	/**
-	 * Hides the label.
+	 * Hides the error message but leaves it in the DOM for the input's aria-describedby.
+	 *
+	 * @param value String
+	 */
+	public void setHideError(final String value) {
+		getElement().setProperty("_hide-error", value.toString());
+	}
+
+	/**
+	 * Hides the error message but leaves it in the DOM for the input's aria-describedby.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getHideError() {
+		var value = getElement().getProperty("_hide-error", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @param value String
 	 */
@@ -120,7 +140,8 @@ public class KolInputColor extends Component {
 	}
 
 	/**
-	 * Hides the label.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @return Optional<String>
 	 */
@@ -149,7 +170,7 @@ public class KolInputColor extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @param value String
 	 */
@@ -158,12 +179,31 @@ public class KolInputColor extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @return Optional<String>
 	 */
 	public Optional<String> getIcon() {
 		var value = getElement().getProperty("_icon", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @param value String
+	 */
+	public void setIcons(final String value) {
+		getElement().setProperty("_icons", value.toString());
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getIcons() {
+		var value = getElement().getProperty("_icons", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 

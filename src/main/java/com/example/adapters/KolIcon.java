@@ -16,7 +16,7 @@ Aktuell werden die Icons von <kol-link _href="https://microsoft.github.io/vscode
  */
 
 @Tag("kol-icon")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-icon")
 public class KolIcon extends Component {
 	/**
@@ -39,7 +39,7 @@ public class KolIcon extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @param value String
 	 */
@@ -48,12 +48,31 @@ public class KolIcon extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @return Optional<String>
 	 */
 	public Optional<String> getIcon() {
 		var value = getElement().getProperty("_icon", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @param value String
+	 */
+	public void setIcons(final String value) {
+		getElement().setProperty("_icons", value.toString());
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getIcons() {
+		var value = getElement().getProperty("_icons", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 

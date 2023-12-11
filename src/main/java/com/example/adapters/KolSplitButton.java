@@ -9,10 +9,17 @@ import java.util.Optional;
 
 /**
  * > <kol-badge _label="untested"></kol-badge> Diese neue Komponente wird als ungetestet markiert, da der vollständige Barrierefreiheitstest noch aussteht. Der vollständige Test kann bei neuen Komponenten und Funktionalitäten auch erst nach einem abgeschlossenen Release erfolgen.
+
+Die SplitButton-Komponente kann genutzt werden, um einen zweigeteilten Button darzustellen. Dabei wird der Primär-Button
+üblicherweise für eine Haupt-Aktion genutzt, während der sekundäre Button ein Kontext-Menü ("Popover") öffnet, hinter
+dem sich weitere Aktionen verbergen.
+
+- Der Sekundär-Button togglet grundsätzlich das Kontextmenü.
+- Für den Primär-Button kann ein individueller Event-Handler hinterlegt werden, wird dies nicht getan togglet er ebenfalls das Kontextmenü.
  */
 
 @Tag("kol-split-button")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-split-button")
 public class KolSplitButton extends Component {
 	/**
@@ -149,7 +156,8 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Hides the label and shows the description in a Tooltip instead.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @param value String
 	 */
@@ -158,7 +166,8 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Hides the label and shows the description in a Tooltip instead.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @return Optional<String>
 	 */
@@ -168,7 +177,7 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @param value String
 	 */
@@ -177,12 +186,31 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @return Optional<String>
 	 */
 	public Optional<String> getIcon() {
 		var value = getElement().getProperty("_icon", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @param value String
+	 */
+	public void setIcons(final String value) {
+		getElement().setProperty("_icons", value.toString());
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getIcons() {
+		var value = getElement().getProperty("_icons", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
@@ -263,7 +291,26 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Defines whether to show the dropdown menu.
+	 * Makes the element show up.
+	 *
+	 * @param value String
+	 */
+	public void setShow(final String value) {
+		getElement().setProperty("_show", value.toString());
+	}
+
+	/**
+	 * Makes the element show up.
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getShow() {
+		var value = getElement().getProperty("_show", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Deprecated: Defines whether to show the dropdown menu.
 	 *
 	 * @param value String
 	 */
@@ -272,7 +319,7 @@ public class KolSplitButton extends Component {
 	}
 
 	/**
-	 * Defines whether to show the dropdown menu.
+	 * Deprecated: Defines whether to show the dropdown menu.
 	 *
 	 * @return Optional<String>
 	 */

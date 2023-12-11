@@ -15,7 +15,7 @@ Eingabe von Leerzeichen eingefügt werden. Zusätzliche Leerzeichen vergrößern
  */
 
 @Tag("kol-link")
-@NpmPackage(value = "@public-ui/components", version = "1.6.2")
+@NpmPackage(value = "@public-ui/components", version = "1.7.6")
 @JsModule("@public-ui/components/dist/components/kol-link")
 public class KolLink extends Component {
 	/**
@@ -152,7 +152,8 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Hides the label and shows the description in a Tooltip instead.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @param value String
 	 */
@@ -161,7 +162,8 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Hides the label and shows the description in a Tooltip instead.
+	 * Hides the caption by default and displays the caption text with a tooltip when the
+interactive element is focused or the mouse is over it.
 	 *
 	 * @return Optional<String>
 	 */
@@ -171,7 +173,7 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Defines the target URI of the link.
+	 * Sets the target URI of the link or citation source.
 	 *
 	 * @param value String
 	 */
@@ -180,7 +182,7 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Defines the target URI of the link.
+	 * Sets the target URI of the link or citation source.
 	 *
 	 * @return Optional<String>
 	 */
@@ -190,7 +192,7 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @param value String
 	 */
@@ -199,7 +201,7 @@ public class KolLink extends Component {
 	}
 
 	/**
-	 * Defines the icon classnames (e.g. `_icon="fa-solid fa-user"`).
+	 * 
 	 *
 	 * @return Optional<String>
 	 */
@@ -243,6 +245,25 @@ public class KolLink extends Component {
 	 */
 	public Optional<String> getIconOnly() {
 		var value = getElement().getProperty("_icon-only", null);
+		return value.isEmpty() ? Optional.empty() : Optional.of(value);
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @param value String
+	 */
+	public void setIcons(final String value) {
+		getElement().setProperty("_icons", value.toString());
+	}
+
+	/**
+	 * Defines the icon classnames (e.g. `_icons="fa-solid fa-user"`).
+	 *
+	 * @return Optional<String>
+	 */
+	public Optional<String> getIcons() {
+		var value = getElement().getProperty("_icons", null);
 		return value.isEmpty() ? Optional.empty() : Optional.of(value);
 	}
 
